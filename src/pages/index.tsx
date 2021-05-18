@@ -72,18 +72,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <section className={styles.projects}>
-        <div>
-          <a href="">
-            <button>Acessar</button>
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <button>Acessar</button>
-          </a>
-        </div>
-      </section>
       <footer className={styles.footer}>
         <div>
           <a href="https://github.com/Leo-byte-rgb">
