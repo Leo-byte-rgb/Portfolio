@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .heroContainer {
@@ -83,8 +83,8 @@
 
 .stacksContainer {
     background-color: var(--fundo);
-    width: 50%;
-    height: 30vh;
+    width: 60%;
+    height: 20rem;
     transform: translateY(-80px);
     border-radius: 20px;
     border: 1px solid var(--contorno);
@@ -100,7 +100,7 @@
         gap: 1rem;
 
         img {
-            width: 3rem;
+            width: 2rem;
         }
 
         span {
@@ -121,7 +121,7 @@
             border: none;
 
             img {
-                width: 1rem;
+                width: 2rem;
             }
         }
 
@@ -137,9 +137,10 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            width: 100%;
 
             img {
-                width: 5rem;
+                width: 3rem;
                 margin: 0 2rem;
             }
 
@@ -150,7 +151,7 @@
                 transition: 0.3s;
 
                 img {
-                    width: 2rem;
+                    width: 1.5rem;
                 }
 
                 &:hover {
