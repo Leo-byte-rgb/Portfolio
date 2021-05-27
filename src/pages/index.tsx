@@ -10,81 +10,61 @@ const Index = () => {
     "icons/html5icon.svg",
     "icons/css.svg",
   ]);
-  const nextImage = () => {
+  const previewImage = () => {
     const lastIndex = images.pop();
     setImages([lastIndex!.toString(), ...images]);
   };
-  const previewImage = () => {
+  const nextImage = () => {
     const firstIndex = images.shift();
     setImages([...images, firstIndex!.toString()]);
   };
-
   return (
     <div className={styles.container}>
-      <section className={styles.heroContainer}>
-        <div>
-          <h1>Front-end Developer</h1>
-          <span>
-            "Code, make it pretty and simple, that's what i do, and love to."
-          </span>
-        </div>
-        <img src="icons/hero.svg" alt="hero" />
+      <section className={styles.welcome}>
+        <h2>Front-end Developer</h2>
+        <span>
+          "Code, make it pretty and simple, that's what i do, and love to."
+        </span>
+        <img src="icons/hero.svg" alt="" />
       </section>
-      <section className={styles.whoIam}>
+      <section className={styles.about}>
+        <h2>Olá, eu sou Leonardo</h2>
         <div>
-          <h2>Olá, eu sou o Leonardo.</h2>
           <p>
-            Entusiasmado por tecnologia e inovação, aos 15 anos entrei no
-            Instituto Federal de Santa Cararina, onde comecei a cursar o ensino
-            médio integrado em informática, lá vi linguagens como C e Java, e
-            com o passar do tempo, comecei a me aprofundar em Javascript e
-            Typescript, tendo como stacks Javascript, Typescript, React,
-            Next.Js, Html e Css, futuramente pretendo me tornar um programador
-            Full-Stack. 🤓
-          </p>
+          Entusiasmado por tecnologia e inovação, aos 15 anos entrei no
+          Instituto Federal de Santa Cararina, onde comecei a cursar o ensino
+          médio integrado em informática, lá vi linguagens como C e Java, e com
+          o passar do tempo, comecei a me aprofundar em Javascript e Typescript,
+          tendo como stacks Javascript, Typescript, React, Next.Js, Html e Css,
+          futuramente pretendo me tornar um programador Full-Stack.
+        </p>
+        <img src="icons/eu.png" alt="" />
         </div>
-        <img src="icons/eu.png" alt="leo" />
       </section>
-      <section className={styles.stacksContainer}>
-        <div>
-          <img src="icons/frontend.svg" alt="frontendev" />
-          <span>Front-end Developer</span>
+      <section className={styles.stacks}>
+        <div className={styles.frontendContainer}>
+          <img src="icons/frontend.svg" alt="" />
+          <h3>Front-end Developer</h3>
         </div>
-        <div>
-          <h2>Stacks</h2>
-          <div className={styles.stacks}>
-            <button onClick={() => previewImage()}>
-              <img src="icons/left-arrow.svg" alt="arrow" />
-            </button>
-            {images.map((src, index) => {
-              return (
-                <img
-                  key={index}
-                  src={src}
-                  alt="stack"
-                  className={index === 2 ? styles.spotlightCard : ""}
-                />
-              );
-            })}
-            <button onClick={() => nextImage()}>
-              <img src="icons/right-arrow.svg" alt="arrow" />
-            </button>
-          </div>
+        <h3>Stacks</h3>
+        <div className={styles.slider}>
+          <button onClick={() => previewImage()}>
+            <img src={images[1]} alt="" className={styles.arrow} />
+          </button>
+          <img src={images[2]} alt="" />
+          <button onClick={() => nextImage()}>
+            <img src={images[3]} alt="" className={styles.arrow} />
+          </button>
         </div>
       </section>
       <footer className={styles.footer}>
         <div>
-          <a href="https://github.com/Leo-byte-rgb">
-            <img src="icons/github.svg" alt="github" />
-          </a>
-          <a href="https://www.linkedin.com/in/leonardo-agostini-costa-4a34371b4/">
-            <img src="icons/linkedin.svg" alt="github" />
-          </a>
+          <img src="icons/github.svg" alt="" />
+          <img src="icons/linkedin.svg" alt="" />
         </div>
-        <h2>Todos os direitos reservados</h2>
+        <h4>Todos os Direitos Reservados.</h4>
       </footer>
     </div>
   );
 };
-
 export default Index;
