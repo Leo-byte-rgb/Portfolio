@@ -1,9 +1,37 @@
+@keyframes animationLeft {
+    0% {
+        left: -3000px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+
+    }
+}
+
+@keyframes animationRight {
+    0% {
+        right: -3000px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+
+    }
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
+
 }
 
 .welcome {
@@ -11,8 +39,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    position: relative;
     padding: 2rem 0 0rem 0rem;
+    animation: animationLeft 2s backwards;
 
     h2 {
         font-weight: 600;
@@ -50,6 +79,8 @@
     align-items: center;
     justify-content: center;
     padding: 4rem 1rem;
+    position: relative;
+    animation: animationRight 2s backwards;
 
     div {
         display: flex;
@@ -163,5 +194,10 @@
 
     img {
         width: 2rem;
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
     }
 }

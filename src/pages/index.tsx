@@ -59,8 +59,13 @@ const Index = () => {
       </section>
       <footer className={styles.footer}>
         <div>
-          <img src="icons/github.svg" alt="" />
-          <img src="icons/linkedin.svg" alt="" />
+          <a href="https://github.com/Leo-byte-rgb" target="blank">
+            <img src="icons/github.svg" alt="" />
+          </a>
+          <a target="blank" href="https://www.linkedin.com/in/leonardo-agostini-costa-4a34371b4/" >
+            <img src="icons/linkedin.svg" alt=""/>
+          </a>
+          
         </div>
         <h4>Todos os Direitos Reservados.</h4>
       </footer>
