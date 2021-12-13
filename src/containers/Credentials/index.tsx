@@ -6,7 +6,7 @@ import {
   mark,
   content,
 } from './style.module.scss';
-import { FaGraduationCap, FaBriefcase } from 'react-icons/Fa';
+import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { memo, useContext, useEffect, useRef } from 'react';
 import { HeightContext } from '../../Contexts/heigths';
 
