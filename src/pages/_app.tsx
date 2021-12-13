@@ -1,16 +1,16 @@
 // import App from "next/app";
-import { Header } from '../components/Header';
 import '../styles/globals.scss';
-import type { AppProps /*, AppContext */ } from "next/app";
+import 'react-toastify/dist/ReactToastify.css';
+import type { AppProps } from 'next/app';
+import { ToastContainer } from 'react-toastify';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <main>
-      <Header />
-      <Component {...pageProps}/>
-    </main>
-  )
-}
+import { HeightProvider } from '../Contexts/heigths';
 
+const App = ({ Component, pageProps }: AppProps) => (
+  <HeightProvider>
+    <Component {...pageProps} />
+    <ToastContainer />
+  </HeightProvider>
+);
 
-export default MyApp;
+export default App;
